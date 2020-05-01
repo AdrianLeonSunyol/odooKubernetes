@@ -9,10 +9,10 @@ metadata:
     io.kompose.service: web
   name: web
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-    - name: "8069"
-      port: 8069
+    - name: "80"
+      port: 80
       targetPort: 8069
   selector:
     io.kompose.service: web
